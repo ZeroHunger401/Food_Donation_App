@@ -1,17 +1,47 @@
 <h1>Register</h1>
-<form action="/register" method="POST">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <button type="submit">Register</button>
-</form>
-<a href="/login">Login</a>
+<!--<form action="/register" method="POST">-->
+<!--    <div>-->
+<!--        <label for="name">Name</label>-->
+<!--        <input type="text" id="name" name="name" required>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label for="email">Email</label>-->
+<!--        <input type="email" id="email" name="email" required>-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label for="password">Password</label>-->
+<!--        <input type="password" id="password" name="password" required>-->
+<!--    </div>-->
+<!--    <button type="submit">Register</button>-->
+<!--</form>-->
+<!--<a href="/login">Login</a>-->
+
+<div id="id02" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+            <p>Please fill in this form to create an account.</p>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" id="email" name="email" required>
+
+            <label for="psw2"><b>Password</b></label>
+            <input type="text" placeholder="Enter Password" id="psw2" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="text" placeholder="Enter Password again" id="psw-repeat" name="psw-repeat" required>
+
+            <label for="person"><b>Are you a donor or a receiver:</b></label>
+            <form action="/action_page.php">
+                <select id="person" name="person">
+                    <option value="donor">Donor</option>
+                    <option value="receiver">Receiver</option>
+                </select>
+            </form>
+
+            <button type="submit">Sign Up</button>
+        </div>
+    </form>
+</div>
