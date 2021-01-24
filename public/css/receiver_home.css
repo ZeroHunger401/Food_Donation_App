@@ -1,0 +1,17 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(177,195,184);
+}
+
+.content{
+    margin: 0;
+    width: 80%;
+    background-color: white;
+}
+/* for javascript */
+.cities{
+    display: none;
+}

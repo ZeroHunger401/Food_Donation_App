@@ -3,9 +3,17 @@
 <% if (messages.error) { %>
     <%= messages.error%>
 <%}%>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Food Donation</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
 
 <form action="/login" method="POST">
-    <div>
+    <div class="container">
         <label for="email">Email</label>
         <input type="email" id="email" name="email" required>
     </div>
@@ -15,4 +23,40 @@
     </div>
     <button type="submit">Login</button>
 </form>
+
+
 <a href="/register">Register</a>
+
+
+<body>
+    <div class="header">
+        <button onclick="document.getElementById('id01').style.display='block'" class="index_button">Log In</button>
+    </div>
+    <div class="center padding-top-2">
+        <h1>Food Donation</h1>
+    </div>
+    <img src="src/mainpage_background.svg">
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <form action="/login" method="POST">
+                <div class="container">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+<!--            </div>-->
+    </form>
+    </div>
+
+</body>
+</html>
