@@ -19,11 +19,11 @@
 
     <div id="id01" class="modal">
 
-        <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="img_avatar2.png" alt="Avatar" class="avatar">
-            </div>
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<!--            <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+        </div>
 
             <div class="container">
                 <label for="uname"><b>Username</b></label>
@@ -47,11 +47,12 @@
 
     <div id="id02" class="modal">
 
-        <form class="modal-content animate" action="/action_page.php" method="post">
-            <div class="imgcontainer">
-                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <img src="img_avatar2.png" alt="Avatar" class="avatar">
-            </div>
+
+    <form class="modal-content animate" action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+<!--            <img src="img_avatar2.png" alt="Avatar" class="avatar">-->
+        </div>
 
             <div class="container">
                 <p>Please fill in this form to create an account.</p>
@@ -69,6 +70,20 @@
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
             </div>
+
+            <label for="person"><b>Are you a donor or a receiver:</b></label>
+            <form action="/action_page.php">
+                <select id="person" name="person">
+                    <option value="donor">Donor</option>
+                    <option value="receiver">Receiver</option>
+                </select>
+            </form>
+
+            <button type="submit">Sign Up</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
 
             <div class="container" style="background-color:#f1f1f1">
                 <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
