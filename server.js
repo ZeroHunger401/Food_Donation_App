@@ -3,7 +3,6 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 const express = require('express')
-var path = require('path')
 const app = express()
 const bcrypt = require('bcrypt')
 const passport = require('passport')
@@ -21,7 +20,6 @@ const users = []
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
-app.use(express.static(path.join(__dirname,'public')))
 app.use(flash())
 app.use(session({
     secret: process.env.SESSION_SECRET,
