@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const express = require('express')
 var path = require('path')
+var pathTable = require('path')
 const app = express()
 const bcrypt = require('bcrypt')
 const passport = require('passport')
@@ -22,6 +23,7 @@ const users = []
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname,'public')))
+app.use(express.static(pathTable.join(__dirname,'table')))
 app.use(flash())
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -35,6 +37,7 @@ app.use(methodOverride('_method'))
 app.get('/', checkAuthenticated, (req, res) => {
     res.render('receiver.ejs')
 })
+
 app.get('/login', checkNotAuthenticated, (req, res) => {
     res.render('login.ejs')
 })

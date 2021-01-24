@@ -14,4 +14,4 @@ function showInfo(x) {
         selected_city.style.display = "table";
     }
 }
-// module.exports = showInfo
+module.exports = showInfo
