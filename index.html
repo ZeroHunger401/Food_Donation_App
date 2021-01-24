@@ -36,17 +36,17 @@
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
-            </div>
 
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+                <br>
             </div>
         </form>
     </div>
 
     <div id="id02" class="modal">
-
 
     <form class="modal-content animate" action="/action_page.php" method="post">
         <div class="imgcontainer">
@@ -65,28 +65,23 @@
                 <label for="psw-repeat"><b>Repeat Password</b></label>
                 <input type="text" placeholder="Enter Password again" id="psw-repeat" name="psw-repeat" required>
 
+                <label for="person"><b>Are you a donor or a receiver:</b></label>
+                <form action="/action_page.php">
+                    <select id="person" name="person">
+                        <option value="donor">Donor</option>
+                        <option value="receiver">Receiver</option>
+                    </select>
+                </form>
+
                 <button type="submit">Sign Up</button>
                 <label>
                     <input type="checkbox" checked="checked" name="remember"> Remember me
                 </label>
-            </div>
 
-            <label for="person"><b>Are you a donor or a receiver:</b></label>
-            <form action="/action_page.php">
-                <select id="person" name="person">
-                    <option value="donor">Donor</option>
-                    <option value="receiver">Receiver</option>
-                </select>
-            </form>
-
-            <button type="submit">Sign Up</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
             </div>
         </form>
     </div>
