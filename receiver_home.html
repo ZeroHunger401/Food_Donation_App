@@ -5,84 +5,14 @@
     <title>Food Donation</title>
     <link href="css/receiver_home.css" rel="stylesheet">
     <script src="js/receiver_home.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik:wght@700&display=swap" rel="stylesheet">
 </head>
-
-<style>
-#Edmonton {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#Edmonton td, #Edmonton th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#Edmonton tr:nth-child(even){background-color: #f2f2f2;}
-
-#Edmonton tr:hover {background-color: #ddd;}
-
-#Edmonton th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: gray;
-  color: white;
-}
-
-#Calgary {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#Calgary td, #Calgary th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#Calgary tr:nth-child(even){background-color: #f2f2f2;}
-
-#Calgary tr:hover {background-color: #ddd;}
-
-#Calgary th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: gray;
-  color: white;
-}
-
-<!--.table {-->
-<!--  font-family: Arial, Helvetica, sans-serif;-->
-<!--  border-collapse: collapse;-->
-<!--  width: 100%;-->
-<!--}-->
-
-<!--.table td, .table th {-->
-<!--  border: 1px solid #ddd;-->
-<!--  padding: 8px;-->
-<!--}-->
-
-<!--.table tr:nth-child(even){background-color: #f2f2f2;}-->
-
-<!--.table tr:hover {background-color: #ddd;}-->
-
-<!--.table th {-->
-<!--  padding-top: 20px;-->
-<!--  padding-bottom: 20px;-->
-<!--  text-align: left;-->
-<!--  background-color: gray;-->
-<!--  color: white;-->
-<!--}-->
-</style>
-
-
-
-<body>
-    <div class="content">
-        <h4>Welcome!</h4>
+<body class="col-50">
+    <div>
+        <img src="src/receiver_home.svg" alt="receiver_home_page">
+    </div>
+    <div class="container">
+        <h4>Welcome!</h4><br>
         <div>
             <label for="selection">Enter your city to find a food donor in your area:</label>
             <select name="selection" id="selection" onchange="showInfo(this.value)">
@@ -90,7 +20,7 @@
                 <option value="Calgary">Calgary</option>
                 <option value="Edmonton">Edmonton</option>
                 <option value="Toronto">Toronto</option>
-            </select>
+            </select><br><br>
             <table id="Edmonton" class="cities">
                 <tr>
                     <th>Name</th>
@@ -106,7 +36,7 @@
                     <td>116 St & 85 Ave</td>
                     <td>Edmonton</td>
                     <td>T6G 2R3</td>
-                    <td><a href="#">Send Request</a></td>
+                    <td><a href="mailto:someone@example.com">Send Request</a></td>
                 </tr>
                 <tr>
                     <td>Jackson</td>
@@ -114,7 +44,7 @@
                     <td>116 St & 85 Ave</td>
                     <td>Edmonton</td>
                     <td>T6G 2R3</td>
-                    <td><a href="#">Send Request</a></td>
+                    <td><a href="mailto:someone@example.com">Send Request</a></td>
                 </tr>
             </table>
             <table id="Calgary" class="cities">
@@ -132,7 +62,7 @@
                     <td>2500 University Dr NW</td>
                     <td>Calgary</td>
                     <td>T2N 1N4</td>
-                    <td><a href="#">Send Request</a></td>
+                    <td><a href="mailto:someone@example.com">Send Request</a></td>
                 </tr>
                 <tr>
                     <td>Jack</td>
@@ -140,7 +70,7 @@
                     <td>2500 University Dr NW</td>
                     <td>Calgary</td>
                     <td>T2N 1N4</td>
-                    <td><a href="#">Send Request</a></td>
+                    <td><a href="mailto:someone@example.com">Send Request</a></td>
                 </tr>
             </table>
             <p id="no_donors_find" class="cities">There are currently no donors available in your area.</p>
