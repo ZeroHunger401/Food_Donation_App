@@ -21,7 +21,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+.modal button {
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -29,7 +29,7 @@ button {
   width: 100%;
 }
 
-button:hover {
+.modal button:hover {
   opacity: 0.8;
 }
 
@@ -130,10 +130,12 @@ span.psw {
 
 </head>
 <body>
-    <div class="center">
-        <h1 class="padding-top-5">Food Donation</h1>
-        <button onclick="document.getElementById('id01').style.display='block'" class="inline index_button">Log In</button>
-        <button onclick="document.getElementById('id02').style.display='block'" class="inline index_button">Sign Up</button>
+    <div class="header">
+        <button onclick="document.getElementById('id01').style.display='block'" class="index_button">Log In</button>
+        <button onclick="document.getElementById('id02').style.display='block'" class="index_button">Sign Up</button>
+    </div>
+    <div class="center padding-top-4">
+        <h1>Food Donation</h1>
     </div>
     <img src="src/mainpage_background.svg">
 
