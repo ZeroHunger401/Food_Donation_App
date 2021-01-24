@@ -1,0 +1,80 @@
+
+<form action="/logout?_method=DELETE" method="POST">
+    <button type="submit"> Log Out</button>
+</form>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Donation</title>
+    <link href="css/receiver_home.css" rel="stylesheet">
+    <script src="js/receiver_home.js"></script>
+</head>
+<body>
+    <div class="content">
+        <h4>Welcome!</h4>
+        <div>
+            <label for="selection">Enter your city to find a food donor in your area:</label>
+            <select name="selection" id="selection" onchange="showInfo(this.value)">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="Calgary">Calgary</option>
+                <option value="Edmonton">Edmonton</option>
+                <option value="Toronto">Toronto</option>
+            </select>
+            <table id="Edmonton" class="cities">
+                <tr>
+                    <th>Name</th>
+                    <th>Available Food Units</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Postal Code</th>
+                    <th>Request Food</th>
+                </tr>
+                <tr>
+                    <td>Smith</td>
+                    <td>20</td>
+                    <td>116 St & 85 Ave</td>
+                    <td>Edmonton</td>
+                    <td>T6G 2R3</td>
+                    <td><a href="#">Send Request</a></td>
+                </tr>
+                <tr>
+                    <td>Jackson</td>
+                    <td>94</td>
+                    <td>116 St & 85 Ave</td>
+                    <td>Edmonton</td>
+                    <td>T6G 2R3</td>
+                    <td><a href="#">Send Request</a></td>
+                </tr>
+            </table>
+            <table id="Calgary" class="cities">
+                <tr>
+                    <th>Name</th>
+                    <th>Available Food Units</th>
+                    <th>Address</th>
+                    <th>Request Food</th>
+                </tr>
+                <tr>
+                    <td>Kevin</td>
+                    <td>30</td>
+                    <td>2500 University Dr NW</td>
+                    <td>Calgary</td>
+                    <td>T2N 1N4</td>
+                    <td><a href="#">Send Request</a></td>
+                </tr>
+                <tr>
+                    <td>Jack</td>
+                    <td>10</td>
+                    <td>2500 University Dr NW</td>
+                    <td>Calgary</td>
+                    <td>T2N 1N4</td>
+                    <td><a href="#">Send Request</a></td>
+                </tr>
+            </table>
+            <p id="no_donors_find" class="cities">There are currently no donors available in your area.</p>
+        </div>
+    </div>
+</body>
+<a href="/donor">Donor</a>
+</html>

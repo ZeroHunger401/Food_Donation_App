@@ -33,7 +33,7 @@ app.use(passport.session())
 app.use(methodOverride('_method'))
 
 app.get('/', checkAuthenticated, (req, res) => {
-    res.render('index.ejs')
+    res.render('receiver.ejs')
 })
 app.get('/login', checkNotAuthenticated, (req, res) => {
     res.render('login.ejs')
@@ -41,6 +41,17 @@ app.get('/login', checkNotAuthenticated, (req, res) => {
 app.get('/register', (req, res) => {
     res.render('register.ejs')
 })
+
+app.get('/donor', checkAuthenticated, (req, res) => {
+    res.render('donor.ejs')
+})
+
+app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+    successRedirect: '/',
+    failureRedirect: '/login',
+    failureFlash: true
+}))
+
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
     successRedirect: '/',
