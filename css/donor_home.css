@@ -5,7 +5,6 @@ html, body{
     margin: 0;
     position: relative;
     background-color: rgb(245,245,245);
-    background-attachment: fixed;
     font-family: Roboto Slab, sans-serif;
 }
 
